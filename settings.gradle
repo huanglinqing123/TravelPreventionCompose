@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "TravelPreventionCompose"
+include ':app'
+include ':appbase'
+include ':module_test_agency'
+include ':module_city'
+include ':module_mine'
+include ':module_risk_level'
