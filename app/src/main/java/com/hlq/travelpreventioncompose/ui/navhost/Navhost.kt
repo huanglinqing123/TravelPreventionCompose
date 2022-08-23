@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.hlq.appbase.routeConfig.AppRouteConfig
 import com.hlq.module_mine.navhost.mineNavhost
+import com.hlq.module_risk_level.navhost.riskLevelNavhost
 import com.hlq.module_test_agency.navhost.testAgencyNavhost
 import com.hlq.moudle_city.navhost.cityNavhost
 
@@ -26,5 +27,7 @@ fun MainNavhost() {
         cityNavhost(navController = navController)
         //mine 模块
         mineNavhost(navController = navController)
+        //风险登记 模块
+        riskLevelNavhost(navController = navController)
     }
 }

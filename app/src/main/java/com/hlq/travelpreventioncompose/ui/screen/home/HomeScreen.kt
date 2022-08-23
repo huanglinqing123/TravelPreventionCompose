@@ -35,12 +35,12 @@ fun HomeScreen(action: IntentAction) {
                 //点击事件监听
                 when (it) {
                     MENU_ID_1 -> {
-                        Log.d("点击测试","-----")
                         //查询核酸检测机构
                         action.enterTestAgency()
                     }
                     MENU_ID_2 -> {
                         //查询风险等级地区
+                        action.enterRiskLevel()
                     }
                     MENU_ID_3 -> {
                         //查询健康出行政策

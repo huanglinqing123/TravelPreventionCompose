@@ -8,7 +8,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hlq.appbase.state.BaseViewState
 import com.hlq.appbase.ui.BasePage
-import com.hlq.appbase.ui.Loading
 import com.hlq.module_city.bean.reqbean.CityDataReqData
 import com.hlq.moudle_city.action.CityAction
 import com.hlq.moudle_city.viewmodel.CityDataViewModel
@@ -22,10 +21,9 @@ import com.hlq.moudle_city.viewmodel.CityDataViewModel
 fun cityBody(cityAction: CityAction) {
 
     val viewModel: CityDataViewModel = viewModel()
-    val state = viewModel.state.collectAsState(BaseViewState.default)
+    val state = viewModel.state.collectAsState(BaseViewState.Default)
     LaunchedEffect(state.value) {
-        if (state.value == BaseViewState.default) {
-            Log.d("网络请求", "--出发请求--")
+        if (state.value == BaseViewState.Default) {
             viewModel.loadCityData()
         }
     }
@@ -33,11 +31,11 @@ fun cityBody(cityAction: CityAction) {
         viewModel.loadCityData()
     }) {
         when (state.value) {
-            is BaseViewState.loadSuccess<*> -> {
-                val list = (state.value as BaseViewState.loadSuccess<List<CityDataReqData>>).data
+            is BaseViewState.LoadSuccess<*> -> {
+                val list = (state.value as BaseViewState.LoadSuccess<List<CityDataReqData>>).data
                 //城市数据
                 val cityList = mutableListOf<CityDataReqData.CitysData>()
-                list.let { it ->
+                list.let {
                     for (i in it.indices) {
                         val data = it[i].citys
                         data?.let { data ->

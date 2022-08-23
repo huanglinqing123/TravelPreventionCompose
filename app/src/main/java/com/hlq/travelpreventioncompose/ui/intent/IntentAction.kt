@@ -2,6 +2,7 @@ package com.hlq.travelpreventioncompose.ui.intent
 
 import android.util.Log
 import androidx.navigation.NavController
+import com.hlq.appbase.routeConfig.RiskLevelRouteConfig
 import com.hlq.appbase.routeConfig.TestAgencyRouteConfig
 
 /**
@@ -12,10 +13,18 @@ import com.hlq.appbase.routeConfig.TestAgencyRouteConfig
 class IntentAction(navController: NavController) {
 
     /**
-     * 进入核酸检测机构
+     * 进入核酸检测机构 页面
      */
     val enterTestAgency: () -> Unit = {
-        Log.d("点击测试","走到方法里了")
         navController.navigate(TestAgencyRouteConfig.AGENCY_MAIN_PAGE)
     }
+
+    /**
+     * 进入风险登记地区 页面
+     */
+    val enterRiskLevel: () -> Unit = {
+        navController.navigate(RiskLevelRouteConfig.RISKLEVEL_MAIN_PAGE)
+    }
+
+
 }

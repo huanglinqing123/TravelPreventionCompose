@@ -10,22 +10,22 @@ sealed class BaseViewState {
     /**
      * 默认状态 需要加载等
      */
-    object default : BaseViewState()
+    object Default : BaseViewState()
 
     /**
      * 正在加载
      */
-    object isLoading : BaseViewState()
+    object IsLoading : BaseViewState()
 
     /**
      * 加载成功
      * @param data 加载成功返回的数据
      */
-    data class loadSuccess<T>(val data: T) : BaseViewState()
+    data class LoadSuccess<T>(val data: T) : BaseViewState()
 
     /**
      * 加载失败
      * @param e 加载失败的信息
      */
-    data class loadError(val e: String) : BaseViewState()
+    data class LoadError(val e: String) : BaseViewState()
 }

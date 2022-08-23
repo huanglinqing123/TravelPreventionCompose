@@ -64,7 +64,6 @@ fun MineScreen(mineIntent: MineAction) {
                     ItemMenu(mineMenu = mineMenu) {
                         when (mineMenu.menuId) {
                             MineMenu.BLOG.menuId -> {
-                                Log.d("点击菜单","--点击了这个菜单--")
                                 mineIntent.toMyBlog()
                             }
                             MineMenu.WEACHAT.menuId -> {

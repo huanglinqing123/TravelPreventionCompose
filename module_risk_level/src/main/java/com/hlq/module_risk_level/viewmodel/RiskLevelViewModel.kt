@@ -1,55 +1,37 @@
-/*
- *
- *  * Copyright (C)  HuangLinqing, TravelPrevention Open Source Project
- *  *
- *  * Licensed under the Apache License, Version 2.0 (the "License");
- *  * you may not use this file except in compliance with the License.
- *  * You may obtain a copy of the License at
- *  *
- *  *      http://www.apache.org/licenses/LICENSE-2.0
- *  *
- *  * Unless required by applicable law or agreed to in writing, software
- *  * distributed under the License is distributed on an "AS IS" BASIS,
- *  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  * See the License for the specific language governing permissions and
- *  * limitations under the License.
- *
- */
-
-package com.hlq.moudle_city.viewmodel
+package com.hlq.module_risk_level.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hlq.appbase.network.HttpErrorDeal
 import com.hlq.appbase.state.BaseViewState
-import com.hlq.moudle_city.respository.CityRespository
-import kotlinx.coroutines.delay
+import com.hlq.module_risk_level.respository.RiskLevelRespository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 /**
- * @author：HuangLinqing
- * @blog：https://huanglinqing.blog.csdn.net/?t=1
- * @公众号：Android 技术圈
- * @desc：CityDataViewModel
- */
-class CityDataViewModel : ViewModel() {
 
+ * @author: HuangLinqing
+
+ * @date: 2022/8/23
+
+ * @desc:风险等级ViewModel
+
+ */
+class RiskLevelViewModel: ViewModel() {
 
     private val _state = MutableStateFlow<BaseViewState>(BaseViewState.Default)
     val state: StateFlow<BaseViewState>
         get() = _state
 
-
     /**
-     * 加载城市数据清单
+     * 加载风险等级地区数据
      */
-    fun loadCityData() {
+    fun loadRiskLevelMessage() {
         _state.value = BaseViewState.IsLoading
         viewModelScope.launch {
             try {
-                val data = CityRespository().loadCityData()
+                val data = RiskLevelRespository().loadRiskLevelMessage()
                 data?.let {
                     if (data.error_code == 0) {
                         data.result?.let {
@@ -67,4 +49,6 @@ class CityDataViewModel : ViewModel() {
             }
         }
     }
+
+
 }

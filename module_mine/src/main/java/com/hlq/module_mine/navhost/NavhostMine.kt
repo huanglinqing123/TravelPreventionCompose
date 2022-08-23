@@ -13,7 +13,7 @@ import com.hlq.module_mine.ui.screen.mine.MyBlog
 /**
  * @author：HuangLinqing
  * @date ：2022/4/11
- * @desc：app模块路由管理
+ * @desc： "我的"模块路由管理
  */
 
 fun NavGraphBuilder.mineNavhost(navController: NavController) {

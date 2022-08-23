@@ -57,6 +57,7 @@ dependencies {
     implementation project(path:':module_test_agency')
     implementation project(path:':module_city')
     implementation project(path:':module_mine')
+    implementation project(path:':module_risk_level')
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     //
 }

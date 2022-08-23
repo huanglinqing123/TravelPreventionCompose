@@ -16,7 +16,7 @@ class MineAction(navController: NavController) {
      * 返回
      */
     val back: () -> Unit = {
-        navController.popBackStack()
+        navController.navigateUp()
     }
 
     /**

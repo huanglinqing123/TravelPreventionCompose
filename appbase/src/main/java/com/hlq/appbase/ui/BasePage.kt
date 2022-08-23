@@ -1,7 +1,6 @@
 package com.hlq.appbase.ui
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import com.hlq.appbase.state.BaseViewState
 
 /**
@@ -16,14 +15,14 @@ fun BasePage(
     content: @Composable () -> Unit
 ) {
     when (baseViewState) {
-        BaseViewState.isLoading -> {
+        BaseViewState.IsLoading -> {
             Loading()
         }
-        is BaseViewState.loadError -> {
+        is BaseViewState.LoadError -> {
             //加载失败的页面 处理为无网络请求
             ErrorContent(onErrorClick)
         }
-        is BaseViewState.loadSuccess<*> -> {
+        is BaseViewState.LoadSuccess<*> -> {
             //加载成功 显示正常数据
             content()
         }
