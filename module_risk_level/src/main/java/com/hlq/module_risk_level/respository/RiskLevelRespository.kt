@@ -46,38 +46,4 @@ class RiskLevelRespository {
         }
         return null
     }
-
-    var mstring = "{\n" +
-        "\t\"reason\": \"success!\",\n" +
-        "\t\"result\": {\n" +
-        "\t\t\"updated_date\": \"2022-08-23 11:00:00\",\n" +
-        "\t\t\"high_count\": \"1356\",\n" +
-        "\t\t\"middle_count\": \"1158\",\n" +
-        "\t\t\"low_count\": \"186\",\n" +
-        "\t\t\"high_list\": [{\n" +
-        "\t\t\t\"type\": \"2\",\n" +
-        "\t\t\t\"province\": \"北京市\",\n" +
-        "\t\t\t\"city\": \"顺义区\",\n" +
-        "\t\t\t\"county\": \"双丰街道\",\n" +
-        "\t\t\t\"area_name\": \"北京市 顺义区 双丰街道\",\n" +
-        "\t\t\t\"communitys\": [\"鲁能7号院溪园36号楼\"],\n" +
-        "\t\t\t\"county_code\": \"110113012\"\n" +
-        "\t\t}],\n" +
-        "\t\t\"middle_list\": [{\n" +
-        "\t\t\t\"type\": \"2\",\n" +
-        "\t\t\t\"province\": \"北京市\",\n" +
-        "\t\t\t\"city\": \"顺义区\",\n" +
-        "\t\t\t\"county\": \"双丰街道\",\n" +
-        "\t\t\t\"area_name\": \"北京市 顺义区 双丰街道\",\n" +
-        "\t\t\t\"communitys\": [\"鲁能7号院溪园36号楼\"],\n" +
-        "\t\t\t\"county_code\": \"110113012\"\n" +
-        "\t\t}]\n" +
-        "\n" +
-        "\n" +
-        "\t}\n" +
-        "}"
-
-    val data = Gson().fromJson(mstring,BaseReqData<RiskLevelReqData>()::class.java)
-
-
 }

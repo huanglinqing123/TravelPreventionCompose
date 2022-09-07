@@ -46,6 +46,7 @@ class RiskLevelViewModel: ViewModel() {
                 }
             } catch (e: Exception) {
                 HttpErrorDeal.dealHttpError(e)
+                _state.value = BaseViewState.LoadError(e.toString())
             }
         }
     }
