@@ -32,7 +32,7 @@
 
 - 请务必自行申请API接口并将KEY填入，否则程序将抛出异常等问题，若你由于若干种原因无法成功申请，可关注我微信公众号 “Android技术圈”，回复 “key”关键字获取可测试的key。<br>
 
-<img src="image/gzh.jpg" width="32%" /><br>
+<img src="image/gzh.jpeg" width="32%" /><br>
 
 - 公共KEY，接口每天仅可使用50次，请酌情使用
 
