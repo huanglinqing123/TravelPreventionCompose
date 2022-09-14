@@ -6,6 +6,8 @@
 此项目将长期维护，后续所有的新技术、平台适配等都将基于此项目实践。<br>
 项目数据基于 "聚合数据"在线API，需申请对应的API，申请成功后将key值替换到appbase下BaseApi中的KEY变量中<br>
 
+<img src="image/10.png" width="100%" />
+
 ### 模块说明
 - app 入口模块<br>
 - appbase 基础模块：基类Activity、网络请求、工具类、配置文件等<br>
