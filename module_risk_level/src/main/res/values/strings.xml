@@ -1,4 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="riskLevelHigh" tools:ignore="ExtraTranslation">高风险地区：</string>
     <string name="riskLevelMiddel" tools:ignore="ExtraTranslation">中风险地区：</string>
+    <string name="risk_high_area_message">高风险地区信息</string>
+    <string name="risk_middle_area_message">中风险地区信息</string>
 </resources>

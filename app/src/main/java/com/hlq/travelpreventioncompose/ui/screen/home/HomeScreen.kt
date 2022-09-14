@@ -44,6 +44,7 @@ fun HomeScreen(action: IntentAction) {
                     }
                     MENU_ID_3 -> {
                         //查询健康出行政策
+                        action.enterTravelPolicy()
                     }
                     else -> {
 

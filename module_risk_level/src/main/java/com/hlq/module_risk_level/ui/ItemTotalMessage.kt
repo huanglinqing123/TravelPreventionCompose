@@ -2,6 +2,7 @@ package com.hlq.module_risk_level.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Card
 import androidx.compose.material.Text
@@ -23,15 +24,13 @@ import com.hlq.module_risk_level.bean.reqbean.RiskLevelReqData
 
  */
 
-@Preview
 @Composable
-fun preview(){
-    ItemToatalMessage(data = RiskLevelReqData())
-}
-
-@Composable
-fun ItemToatalMessage(data:RiskLevelReqData) {
-    Card(elevation = 10.dp, backgroundColor = Color.White) {
+fun ItemToatalMessage(data: RiskLevelReqData) {
+    Card(
+        elevation = 10.dp, modifier = Modifier
+            .fillMaxWidth()
+            .padding(10.dp), backgroundColor = Color.White
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()

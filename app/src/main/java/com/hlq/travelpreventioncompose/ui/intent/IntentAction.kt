@@ -1,7 +1,10 @@
 package com.hlq.travelpreventioncompose.ui.intent
 
 import android.util.Log
+import android.widget.Toast
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
+import com.hlq.appbase.BaseApplication
 import com.hlq.appbase.routeConfig.RiskLevelRouteConfig
 import com.hlq.appbase.routeConfig.TestAgencyRouteConfig
 
@@ -24,6 +27,13 @@ class IntentAction(navController: NavController) {
      */
     val enterRiskLevel: () -> Unit = {
         navController.navigate(RiskLevelRouteConfig.RISKLEVEL_MAIN_PAGE)
+    }
+
+    /**
+     * 进入出行政策 页面
+     */
+    val enterTravelPolicy: () -> Unit = {
+        Toast.makeText(BaseApplication.context, "交给你啦～", Toast.LENGTH_LONG).show()
     }
 
 

@@ -8,6 +8,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -58,6 +62,15 @@ fun MineScreen(mineIntent: MineAction) {
         )
 
         val mineMenu = MineMenu.values()
+
+        var showDialog by remember {
+            mutableStateOf(false)
+        }
+
+        WeChatDialog(showDialog, onChange = {
+            showDialog = it
+        })
+
         LazyColumn(content = {
             item {
                 mineMenu.forEachIndexed { _, mineMenu ->
@@ -67,10 +80,10 @@ fun MineScreen(mineIntent: MineAction) {
                                 mineIntent.toMyBlog()
                             }
                             MineMenu.WEACHAT.menuId -> {
-
+                                showDialog = true
                             }
                             MineMenu.THEME.menuId -> {
-
+                                mineIntent.changeTheme()
                             }
                         }
                     }
