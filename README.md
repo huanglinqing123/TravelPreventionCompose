@@ -4,7 +4,7 @@
 
 出行防疫App是一款MVVM模式的Compose版本App，采用了组件化、Aroute、协程、flow等技术，适合初学者学习使用。<br>
 此项目将长期维护，后续所有的新技术、平台适配等都将基于此项目实践。<br>
-项目数据基于 "聚合数据"在线API，需申请对应的API，申请成功后将key值替换到appbase下BaseApi中的KEY变量中<br>
+项目数据基于 "聚合数据"在线API，需申请对应的API，申请成功后将key值替换到appbase下BaseApi中的KEY变量中<br><br>
 
 <img src="image/10.png" width="100%" />
 
