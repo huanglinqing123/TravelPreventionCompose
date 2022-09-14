@@ -1,5 +1,5 @@
 # MVVM开源项目——出行防疫App Compose版本
-## 非Compose版本：[非Compose版本](https://github.com/huanglinqing123/TravelPrevention)
+## 之前做过一个：[非Compose版本](https://github.com/huanglinqing123/TravelPrevention)
 
 
 出行防疫App是一款MVVM模式的Compose版本App，采用了组件化、Aroute、协程、flow等技术，适合初学者学习使用。<br>
